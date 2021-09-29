@@ -242,6 +242,7 @@ header{
     display: grid;
     background-color: #3C3C3C;
     position: relative;
+    grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas: 
         "contact contact location"
         "email email location";
@@ -293,6 +294,10 @@ header{
     border-radius: 3px 0px 0px 3px;
     width: 100%;
     margin: 10px;
+}
+
+.line2{
+    display: none;
 }
 
 .input__fields-area{
@@ -462,3 +467,111 @@ footer{
     font-size: var(--fs-smallfont);
     font-weight: 800;
 } 
+
+/* ------------------------MEDIA QUERIES ------------------------ */
+
+@media (max-width: 450px){
+    .navigation{
+        display: none;
+    }
+
+    .hero{
+        background-position: right;
+    }
+
+    .welcome{
+        font-size: 2rem;
+        margin-top: 50%;
+        width: 300px;
+    }
+
+    .menu__area{
+        height: 305vh;
+    }
+
+    .menuu{
+        grid-template-columns: 1fr;
+    }
+
+    .about__us-container{
+        height: 209vh;
+        margin-bottom: 0;
+    }
+
+    .aboutus{
+        height: 80%;
+    }
+
+    .contact{
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+            "contact"
+            "location"
+            "email";
+        height: 220vh;
+        margin-top: 0%;
+    }
+
+    .line, 
+    .line2{
+        display: block;
+        border: 3px solid rgb(211, 210, 210);
+        border-radius: 3px;
+        width: 100%;
+        margin: 50px auto;
+    }
+
+    .vertical__line{
+        display: none;
+    }
+
+    .location__area,
+    .location__area-body{
+        margin: 0%;
+        padding: 0%;
+    }
+
+    .item__1,
+    .item__2,
+    .item__3{
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "image"
+        "title"
+        "body";
+
+        height: 150vh;
+        margin: 5%;
+    }
+
+    .item__1-text,
+    .item__2-text,
+    .item__3-text,
+    .item__1-title,
+    .item__2-title,
+    .item__3-title{
+        margin: auto;
+    }
+
+    .item__1-title,
+    .item__2-title,
+    .item__3-title{
+        font-size: var(--fs-smallfont);
+    }
+
+    .item__1-text,
+    .item__2-text,
+    .item__3-text{
+        font-size: 1.1rem;
+    }
+
+    .item__1-image,
+    .item__2-image,
+    .item__3-image{
+        height: 80%;
+        margin: 2% auto;
+        padding: 0px;
+        border-radius: 20px;
+        box-shadow: -3px 4px 5px rgb(53, 53, 53),-6px 8px 5px rgba(90, 90, 90, 0.5);
+    }
+}
